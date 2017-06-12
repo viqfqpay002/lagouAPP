@@ -1,0 +1,14 @@
+<div class="position-class">
+    <h5>职位分类</h5>
+    <!--循环显示出按钮，点击当前按钮，添加active高亮-->
+    <button ng-click="showPositionList($index)" class="{{$index===isActive?'active':''}}"
+            ng-repeat="cls in com.positionClass" ng-bind="cls.name"></button>
+<ul>
+    <!--循环显示内容-->
+    <li class="p-r" ng-repeat="pos in positionList" >
+        <p ng-bind="pos.name"></p>
+        <p ng-bind="pos.createdDate"></p>
+        <span class="p-a" ng-bind="pos.salary"></span>
+    </li>
+</ul>
+</div>
